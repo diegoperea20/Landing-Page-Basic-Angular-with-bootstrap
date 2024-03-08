@@ -1,0 +1,23 @@
+<h1>Productos</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Detalle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <a href="https://youtu.be/soInCF7nbDw?si=IhDhcNG9XIrGR7Gu&t=18063" target="_blank">Ver</a>
+    <tr *ngFor="let product of productList">
+      <th scope="row">{{product.id}}</th>
+      <td>{{product.name}}</td>
+      <td>$ {{product.price}}</td>
+      <button class="btn btn-primary" [routerLink]="['/products', product.id]">
+        Ver
+      </button>
+    </tr>
+    
+  </tbody>
+</table>
